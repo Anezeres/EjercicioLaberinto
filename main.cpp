@@ -20,6 +20,5 @@ int main() {
 
   Avatar nuevoAvatar = Avatar(3,0, tablero);
   nuevoAvatar.encontrarCamino();
-
   
 } 

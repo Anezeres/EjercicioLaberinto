@@ -21,11 +21,13 @@ class Avatar{
     ~Avatar();
     void encontrarCamino();
     void posicionesPosibles();
+    void agregarCaminoPosible(int, int);
     void cambiarPosicion();
     void agregarCaminoVisitado();
-    void agregarCaminoPosible();
     int getPosicionX();
     int getPosicionY();
+    void setPosicionX(int);
+    void setPosicionY(int);
 
 
 };
