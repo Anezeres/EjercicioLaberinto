@@ -3,22 +3,40 @@
 #include "Avatar.h"
 using namespace std;
 
+/*
+Archivo: main.cpp
+Autor: Julian Alexander Alvarez Payares <alvarez.julian@correounivalle.edu.co>
+Fecha de Creación: 03/05/2022
+Ultima modificación: 04/05/2022
+Licencia: GNU-GPL
+GitHub: https://github.com/Anezeres 
+*/
+
+/*
+HISTORIA: 
+Crear una clase Tablero que representa un laberinto y una clase Avatar que representará
+un jugador que deberá encontrar la salida.
+*/
+
+
 int main() {
+
+  /* Se crea una instancia de tablero y se carga */
   Tablero tablero;
   tablero.cargarTablero();
+
+  cout<<"\t\t ------TABLERO------"<<endl<<endl;
+
+  /* Se muestra el tablero */
+  
   tablero.mostrarTablero();
 
-  /* Posicionamiento del tablero (Y,X) */
-
-  cout<<"Celda 0,0: "<<tablero.getCelda(0,0)<<endl;
-  cout<<"Celda 0,1: "<<tablero.getCelda(1,0)<<endl;
-  cout<<"Celda 0,2: "<<tablero.getCelda(2,0)<<endl;
-  cout<<"Celda 0,3: "<<tablero.getCelda(3,0)<<endl;
-  cout<<"Celda 0,4: "<<tablero.getCelda(4,0)<<endl;
-
-  
+  /* Se crea una instancia de Avatar en la posicion 3,0 y se le ingresa el tablero creado anteriormente*/
 
   Avatar nuevoAvatar = Avatar(3,0, tablero);
+
+  /* Se encuentra el Camino */
+  
   nuevoAvatar.encontrarCamino();
   
 } 
